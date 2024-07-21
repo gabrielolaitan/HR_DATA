@@ -88,6 +88,5 @@ Here is a tabular representation of the expected schema for the clean data:
 
 
 ![](Screenshot%202024-06-21%20142554.png)
-https://github.com/gabrielolaitan/HR_DATA/blob/main/Screenshot%202024-06-21%20142554.png
 
 
