@@ -86,3 +86,8 @@ Here is a tabular representation of the expected schema for the clean data:
    -- We have to change the field name "ï»¿id" to the correct one "id"
    ALTER TABLE human_resources RENAME COLUMN ï»¿id TO id;
 
+
+
+![column name change](ASSETS/Screenshot 2024-07-21 110228.png)
+
+
