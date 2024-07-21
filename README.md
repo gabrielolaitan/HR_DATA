@@ -87,7 +87,6 @@ Here is a tabular representation of the expected schema for the clean data:
    ALTER TABLE human_resources RENAME COLUMN ï»¿id TO id;
 
 
-
-![column name change](ASSETS/Screenshot 2024-07-21 110228.png)
+![](ASSETS/Screenshot 2024-07-21 110228.png)
 
 
