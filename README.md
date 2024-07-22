@@ -42,11 +42,10 @@ Employee dataset with columns: `id`, `first_name`, `last_name`, `birthdate`, `ge
 
 ## Data Exploration Notes
 
-1. There are at least 4 columns that contain the data needed for this analysis, indicating we have everything we need from the file without requiring additional data from the client.
-2. The first column contains channel IDs, which are separated by an `@` symbol. We need to extract the channel names from this.
-3. Some cells and header names are in a different language. We need to confirm if these columns are necessary, and if so, address them.
-4. We have more data than needed, so some columns will need to be removed.
-
+1. There are at least 13 columns that contain the data we need for this analysis, which signals we have everything we need from the file without needing to contact the client for any more data.
+2. The second and third columns contain the first name and last name with what appears to be employee names - we need to concatenate the two columns to get a new “NAME”.
+3. Some of the header names are in a different language and lowercase, we need to address them and change them to uppercase.
+4. We have more data than we need, so some of these columns would need to be removed.
 ## Data Collection and Extraction
 
 ### SQL Database Connection
@@ -63,22 +62,20 @@ Employee dataset with columns: `id`, `first_name`, `last_name`, `birthdate`, `ge
 | Number of Rows    | 100          |
 | Number of Columns | 4            |
 
-Here is a tabular representation of the expected schema for the clean data:
-
-| Column Name       | Data Type    |
-|-------------------|--------------|
-| ID                | VARCHAR      |
-| NAME              | INTEGER      |
-| BIRTHDATE         | INTEGER      |
-| GENDER            | INTEGER      |
-| DEPARTMENT        | INTEGER      |
-| JOB_TITLE         | INTEGER      |
-| LOCATION          | INTEGER      |
-| HIRE_DATE         | INTEGER      |
-| TERMDATE          | INTEGER      |
-| LOCATION_CITY     | INTEGER      |
-| LOCATION_STATE    | INTEGER      |
-
+### And here is a tabular representation of the expected schema for the clean data:
+| Column Name | Data Type |
+| --- | --- |
+| ID | VARCHAR | 
+| NAME| CHAR | 
+| BIRTHDATE| DATE | 
+| GENDER| CHAR | 
+| DEPARTMENT| CHAR |
+| JOB_TITLE| CHAR |
+| LOCATION| CHAR |
+| HIRE_DATE| DATE |
+| TERMDATE| DATETIME |
+| LOCATION_CITY| CHAR |
+| LOCATION_STATE| CHAR |
 ### SQL Transformation
 
 1. **ALTER COLUMN NAME:**
