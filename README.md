@@ -86,4 +86,7 @@ Employee dataset with columns: `id`, `first_name`, `last_name`, `birthdate`, `ge
 
 ![output](Screenshot%202024-07-21%20142117.png)
 
+### Concatenate:
+
+
 
