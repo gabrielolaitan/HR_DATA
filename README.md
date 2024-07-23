@@ -87,6 +87,42 @@ Employee dataset with columns: `id`, `first_name`, `last_name`, `birthdate`, `ge
 ![output](Screenshot%202024-07-21%20142117.png)
 
 ### Concatenate:
+-- Concatenate first name and last name as name 
+ ```sql
+SELECT 
+    id AS ID,
+    CONCAT(first_name, " ", last_name) AS NAME,
+    birthdate AS BIRTHDATE,
+    gender AS GENDER,
+    department AS DEPARTMENT,
+    jobtitle AS JOB_TITLE,
+    location AS LOCATION,
+    hire_date AS HIRE_DATE,
+    COALESCE(termdate, '-') AS TERMDATE,
+    location_city AS LOCATION_CITY,
+    location_state AS LOCATION_STATE
+FROM human_resources;
+```
+
+### Create The SQL View:
+
+-- Create a view to store the transformed data
+```sql
+CREATE VIEW project_X AS 
+SELECT 
+    id AS ID,
+    CONCAT(first_name, " ", last_name) AS NAME,
+    birthdate AS BIRTHDATE,
+    gender AS GENDER,
+    department AS DEPARTMENT,
+    jobtitle AS JOB_TITLE,
+    location AS LOCATION,
+    hire_date AS HIRE_DATE,
+    COALESCE(termdate, '-') AS TERMDATE,
+    location_city AS LOCATION_CITY,
+    location_state AS LOCATION_STATE
+FROM human_resources;
+```
 
 
 
