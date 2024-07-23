@@ -53,7 +53,7 @@ Employee dataset with columns: `id`, `first_name`, `last_name`, `birthdate`, `ge
 - Connect to the SQL database.
 - Import and load the table into the SQL database.
 
-### Data Cleaning and Preparation
+## Data Cleaning and Preparation
 
 **Data Cleaning:** The aim is to refine our dataset to ensure it is structured and ready for analysis. The cleaned data should meet the following criteria and constraints:
 
@@ -76,7 +76,8 @@ Employee dataset with columns: `id`, `first_name`, `last_name`, `birthdate`, `ge
 | TERMDATE| DATETIME |
 | LOCATION_CITY| CHAR |
 | LOCATION_STATE| CHAR |
-### SQL Transformation
+
+## SQL Transformation
 
 1. **ALTER COLUMN NAME:**
    ```sql
@@ -124,5 +125,48 @@ SELECT
 FROM human_resources;
 ```
 
+## Testing
+### Row Count Check:
+```sql
+-- Count the total number of records (or rows) in the SQL view
+SELECT COUNT(*) AS no_of_rows FROM project_x;
+```
 
+### Column Count Check:
+```sql
+-- Count the total number of columns (or fields) in the SQL view
+SELECT COUNT(*) AS column_count 
+FROM INFORMATION_SCHEMA.COLUMNS 
+WHERE TABLE_NAME = 'project_x';
+```
 
+### Duplicate Count Check:
+```sql
+-- Check for duplicate rows in the view
+SELECT 
+    NAME, 
+    ID, 
+    BIRTHDATE, 
+    GENDER, 
+    DEPARTMENT, 
+    JOB_TITLE, 
+    LOCATION, 
+    HIRE_DATE, 
+    TERMDATE, 
+    LOCATION_CITY, 
+    LOCATION_STATE
+FROM project_x
+GROUP BY 
+    NAME, 
+    ID, 
+    BIRTHDATE, 
+    GENDER, 
+    DEPARTMENT, 
+    JOB_TITLE, 
+    LOCATION, 
+    HIRE_DATE, 
+    TERMDATE, 
+    LOCATION_CITY, 
+    LOCATION_STATE
+HAVING COUNT(*) > 1;
+```
