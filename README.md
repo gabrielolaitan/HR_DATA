@@ -177,7 +177,32 @@ HAVING COUNT(*) > 1;
 
 -- create a new column "AGE" with the datedif formula
 ```excel
-=DATEDIF(C2,TODAY(),"Y")
+= DATEDIF(C2,TODAY(),"Y")
 ```
+
+
+### Creating The Employment Status Column
+
+-- create a new column "EMPLOYMENT STATUS" with the Nextedif formula
+```excel
+= IF(I2="-","current",IF(I2>=TODAY(),"contract","terminated"))
+```
+
+
+
+### Creating The Employment Duration Column
+
+-- create a new column "EMPLOYMENT DURATION" with the datedif formula
+```excel
+= DATEDIF(H2,TODAY(),"Y")
+```
+
+
+
+
+
+
+
+
 
 
