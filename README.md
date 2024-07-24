@@ -85,7 +85,7 @@ Employee dataset with columns: `id`, `first_name`, `last_name`, `birthdate`, `ge
    ALTER TABLE human_resources RENAME COLUMN ï»¿id TO id;
 
 
-![output](Screenshot%202024-07-21%20142117.png)
+![ALTER](ASSETS/Screenshot2024-07-21110228.png)
 
 ### Concatenate:
 -- Concatenate first name and last name as name 
