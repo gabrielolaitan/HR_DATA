@@ -170,3 +170,14 @@ GROUP BY
     LOCATION_STATE
 HAVING COUNT(*) > 1;
 ```
+
+## Excel Transformation
+
+### Creating The Age Column
+
+-- create a new column "AGE" with the datedif formula
+```excel
+=DATEDIF(C2,TODAY(),"Y")
+```
+
+
