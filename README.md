@@ -104,6 +104,7 @@ SELECT
     location_state AS LOCATION_STATE
 FROM human_resources;
 ```
+![CONCAT](ASSETS/Screenshot%202024-07-24%20230219.png)
 
 ### Create The SQL View:
 
@@ -124,6 +125,8 @@ SELECT
     location_state AS LOCATION_STATE
 FROM human_resources;
 ```
+![SQL VIEW](ASSETS/Screenshot%202024-07-24%20230336.png)
+
 
 ## Testing
 ### Row Count Check:
@@ -131,6 +134,7 @@ FROM human_resources;
 -- Count the total number of records (or rows) in the SQL view
 SELECT COUNT(*) AS no_of_rows FROM project_x;
 ```
+![ROW COUNT CHECK](ASSETS/Screenshot%202024-07-25%20085218.png)
 
 ### Column Count Check:
 ```sql
@@ -139,6 +143,7 @@ SELECT COUNT(*) AS column_count
 FROM INFORMATION_SCHEMA.COLUMNS 
 WHERE TABLE_NAME = 'project_x';
 ```
+![COLUMN COUNT CHECK](ASSETS/Screenshot%202024-07-24%20231121.png)
 
 ### Duplicate Count Check:
 ```sql
@@ -170,6 +175,8 @@ GROUP BY
     LOCATION_STATE
 HAVING COUNT(*) > 1;
 ```
+![DUPLICATE COUNT CHECK](ASSETS/Screenshot%202024-07-24%20231614.png)
+
 
 ## Excel Transformation
 
@@ -179,6 +186,7 @@ HAVING COUNT(*) > 1;
 ```excel
 = DATEDIF(C2,TODAY(),"Y")
 ```
+![AGE COLUMN](ASSETS/Screenshot%202024-07-24%20214018.png)
 
 
 ### Creating The Employment Status Column
@@ -187,6 +195,7 @@ HAVING COUNT(*) > 1;
 ```excel
 = IF(I2="-","current",IF(I2>=TODAY(),"contract","terminated"))
 ```
+![EMPLOYMENT STATUS COLUMN](ASSETS/Screenshot%202024-07-24%20215017.png)
 
 
 
@@ -196,6 +205,7 @@ HAVING COUNT(*) > 1;
 ```excel
 = DATEDIF(H2,TODAY(),"Y")
 ```
+![EMPLOYMENT DURATION COLUMN](ASSETS/Screenshot%202024-07-24%20215529.png)
 
 
 
